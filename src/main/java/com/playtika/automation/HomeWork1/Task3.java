@@ -46,3 +46,5 @@ public class Task3 {
         System.out.printf("Единичный вектор для вектора (%f, %f, %f) => (%f, %f, %f)", x, y, z, unitVectorX, unitVectorY, unitVectorZ);
     }
 }
+
+
