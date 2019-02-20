@@ -12,6 +12,8 @@ package com.playtika.automation.HomeWork1;
 
 import java.util.Scanner;
 
+import static java.lang.Math.sqrt;
+
 public class Task3 {
 
     public static void main(String[] args) {
@@ -34,7 +36,8 @@ public class Task3 {
     }
 
     private static double vector(double x, double y, double z) {
-        return java.lang.Math.sqrt(x * x + y * y + z * z);
+
+        return sqrt(x * x + y * y + z * z);
     }
 
     private static void unitVector(double x, double y, double z, double vectorLength) {
@@ -46,5 +49,3 @@ public class Task3 {
         System.out.printf("Единичный вектор для вектора (%f, %f, %f) => (%f, %f, %f)", x, y, z, unitVectorX, unitVectorY, unitVectorZ);
     }
 }
-
-

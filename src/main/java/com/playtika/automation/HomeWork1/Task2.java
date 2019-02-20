@@ -44,5 +44,4 @@ public class Task2 {
         System.out.println(d4);
         System.out.println(d5);
     }
-
 }

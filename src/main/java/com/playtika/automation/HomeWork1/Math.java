@@ -1,6 +1,7 @@
 package com.playtika.automation.HomeWork1;
 
 public class Math {
+
     public static void main(String[] args) {
 
         int a = 2;
