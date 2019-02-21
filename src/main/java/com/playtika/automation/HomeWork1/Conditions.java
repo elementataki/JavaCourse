@@ -15,14 +15,23 @@ public class Conditions {
         int b = consoleB.nextInt();
 
         if (a > 0 && b > 0) {
+
             System.out.println("Result is: " + addition(a, b));
+
         } else if (a > 0 && b < 0) {
+
             System.out.println("Result is: " + subtraction(a, b));
+
         } else if (a <0 && b > 0) {
+
             System.out.println("Result is: " + multiplication(a, b));
+
         } else if (a < 0 && b < 0) {
+
             System.out.println("Result is: " + division(a, b));
+
         } else {
+
             System.out.println(0);
         }
     }
