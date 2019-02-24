@@ -1,4 +1,4 @@
-package com.playtika.automation.HomeWork1;
+package com.playtika.automation;
 
 // Math.sqrt((a + b) * (c + d - e))
 

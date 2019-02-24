@@ -32,7 +32,7 @@ public class Task3 {
 
         double vectorLength = vector(x, y, z);
 
-        unitVector(x,y,z,vectorLength);
+        unitVector(x, y, z, vectorLength);
     }
 
     private static double vector(double x, double y, double z) {
