@@ -11,6 +11,8 @@ import java.util.Scanner;
 
 public class Task1 {
 
+    public static DecimalFormat df2 = new DecimalFormat("#.##");
+
     public static void main(String[] args) {
 
         System.out.println("Enter the quantity of purchases: ");
@@ -36,14 +38,12 @@ public class Task1 {
 
         double pp = purchase(cp, cw) + purchase(kp, kw);
 
-        if (q == 1) {System.out.printf("Purchase price of %s kg of candies and %s kg of cookies is %s uah.%n%n", df2.format(cw), df2.format(kw),
-                                      df2.format(pp));
-        }
-        else if (q > 1) {
+        if (q == 1) {
+            System.out.printf("Purchase price of %s kg of candies and %s kg of cookies is %s uah.%n%n", df2.format(cw), df2.format(kw), df2.format(pp));
+        } else if (q > 1) {
             System.out.printf("Price for %d purchases each of which consists of %s kg of candies and %s kg of cookies is %s uah.%n", q, df2.format(cw),
                               df2.format(kw), df2.format(q * pp));
-        }
-        else {
+        } else {
             System.out.println("Enter the positive quantity of purchases");
         }
     }
@@ -51,7 +51,5 @@ public class Task1 {
     private static double purchase(double x, double y) {
         return x * y;
     }
-
-    public static DecimalFormat df2 = new DecimalFormat("#.##");
 
 }

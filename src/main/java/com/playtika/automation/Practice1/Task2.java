@@ -18,15 +18,15 @@ public class Task2 {
         Scanner distance = new Scanner(System.in);
         double s = distance.nextDouble();
 
-        System.out.printf("Speed value is: %s m/sec %n" , df2.format(kmToM(s)/minToSec(t)));
+        System.out.printf("Speed value is: %s m/sec %n", df2.format(kmToM(s) / minToSec(t)));
 
     }
 
-    private static double minToSec (double t) {
+    private static double minToSec(double t) {
         return t * 60;
     }
 
-    private static double kmToM (double s) {
+    private static double kmToM(double s) {
         return s * 1000;
     }
 
