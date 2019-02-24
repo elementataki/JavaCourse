@@ -20,16 +20,16 @@ public class Math {
 
 //        System.out.println(f);
 
-        long g = 11;
-        long h = 25;
+        long g = 11L;
+        long h = 25L;
 
         long i = multiplication(g, h);
         printLong(i);
 
 //        System.out.println(i);
 
-        double j = 111;
-        double k = 7;
+        double j = 11.1f;
+        double k = 7.02f;
 
         double l = division(j, k);
         printDouble(l);

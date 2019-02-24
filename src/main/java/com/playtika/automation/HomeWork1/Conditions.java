@@ -16,23 +16,24 @@ public class Conditions {
 
         if (a > 0 && b > 0) {
 
-            System.out.println("Result is: " + addition(a, b));
+             System.out.println("Result of addition is: " + addition(a, b));
 
         } else if (a > 0 && b < 0) {
 
-            System.out.println("Result is: " + subtraction(a, b));
+            System.out.println("Result of subtraction is: " + subtraction(a, b));
 
         } else if (a <0 && b > 0) {
 
-            System.out.println("Result is: " + multiplication(a, b));
+            System.out.println("Result of multiplication is: " + multiplication(a, b));
 
         } else if (a < 0 && b < 0) {
 
-            System.out.println("Result is: " + division(a, b));
+            System.out.println("Result of division is: " + division(a, b));
 
         } else {
 
-            System.out.println(0);
+            System.out.println("At least one of entered numbers equals to zero");
+
         }
     }
 
