@@ -22,9 +22,7 @@ public class Task2 {
         System.out.print("Enter the 5-digits number you want to decompose: ");
 
         Scanner console = new Scanner(System.in);
-
         int n = console.nextInt();
-
         numberDecomposition(n);
 
     }
@@ -32,10 +30,10 @@ public class Task2 {
     private static void numberDecomposition(int n) {
 
         int d1 = n / 10000;
-        int d2 = (n - d1 * 10000) / 1000;
-        int d3 = (n - d1 * 10000 - d2 * 1000) / 100;
-        int d4 = (n - d1 * 10000 - d2 * 1000 - d3 * 100) / 10;
-        int d5 = n - d1 * 10000 - d2 * 1000 - d3 * 100 - d4 * 10;
+        int d2 = subtraction(n, d1 * 10000) / 1000;
+        int d3 = subtraction(n, addition(d1 * 10000, d2 * 1000)) / 100;
+        int d4 = subtraction(n, addition(d1 * 10000, addition(d2 * 1000, d3 * 100))) / 10;
+        int d5 = subtraction(n, addition(d1 * 10000, addition(d2 * 1000, addition(d3 * 100, d4 * 10))));
 
         System.out.printf("Decomposition of the %d number is the following:%n", n);
         System.out.println(d1);
@@ -44,4 +42,13 @@ public class Task2 {
         System.out.println(d4);
         System.out.println(d5);
     }
+
+    private static int addition(int x, int y) {
+        return x + y;
+    }
+
+    private static int subtraction(int x, int y) {
+        return x - y;
+    }
+
 }
