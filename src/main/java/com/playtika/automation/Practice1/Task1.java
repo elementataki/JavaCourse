@@ -15,41 +15,38 @@ public class Task1 {
 
     public static void main(String[] args) {
 
-        System.out.println("Enter the quantity of purchases: ");
-        Scanner quantity = new Scanner(System.in);
+        Scanner enterValue = new Scanner(System.in);
 
-        int q = quantity.nextInt();
+        System.out.println("Enter the quantity of purchases: ");
+        int purchaseQuantity = enterValue.nextInt();
 
         System.out.println("Enter the price in uah of 1 kg of candies: ");
-        Scanner candyPrice = new Scanner(System.in);
-        double cp = candyPrice.nextDouble();
+        double candyPrice = enterValue.nextDouble();
 
         System.out.println("Enter the price in uah of 1 kg of cookies: ");
-        Scanner cookiePrice = new Scanner(System.in);
-        double kp = cookiePrice.nextDouble();
+        double cookiePrice = enterValue.nextDouble();
 
         System.out.println("Enter weight of candies in kg: ");
-        Scanner candyWeight = new Scanner(System.in);
-        double cw = candyWeight.nextDouble();
+        double candyWeight = enterValue.nextDouble();
 
         System.out.println("Enter weight of cookies in kg: ");
-        Scanner cookieWeight = new Scanner(System.in);
-        double kw = cookieWeight.nextDouble();
+        double cookieWeight = enterValue.nextDouble();
 
-        double pp = purchase(cp, cw) + purchase(kp, kw);
+        double purchasePrice = itemPrice(candyPrice, candyWeight) + itemPrice(cookiePrice, cookieWeight);
 
-        if (q == 1) {
-            System.out.printf("Purchase price of %s kg of candies and %s kg of cookies is %s uah.%n%n", df2.format(cw), df2.format(kw), df2.format(pp));
-        } else if (q > 1) {
-            System.out.printf("Price for %d purchases each of which consists of %s kg of candies and %s kg of cookies is %s uah.%n", q, df2.format(cw),
-                              df2.format(kw), df2.format(q * pp));
+        if (purchaseQuantity == 1) {
+            System.out.printf("Purchase price of %s kg of candies and %s kg of cookies is %s uah.%n%n",
+                              df2.format(candyWeight), df2.format(cookieWeight), df2.format(purchasePrice));
+        } else if (purchaseQuantity > 1) {
+            System.out.printf("Price for %d purchases each of which consists of %s kg of candies and %s kg of cookies is %s uah.%n",
+                              purchaseQuantity, df2.format(candyWeight), df2.format(cookieWeight), df2.format(purchaseQuantity * purchasePrice));
         } else {
             System.out.println("Enter the positive quantity of purchases");
         }
     }
 
-    private static double purchase(double x, double y) {
-        return x * y;
+    private static double itemPrice(double price, double weight) {
+        return price * weight;
     }
 
 }

@@ -10,24 +10,24 @@ public class Task2 {
 
     public static void main(String[] args) {
 
+        Scanner enterValue = new Scanner(System.in);
+
         System.out.println("Enter the time value in min:");
-        Scanner time = new Scanner(System.in);
-        double t = time.nextDouble();
+        double timeInMin = enterValue.nextDouble();
 
         System.out.println("Enter the distance value in km:");
-        Scanner distance = new Scanner(System.in);
-        double s = distance.nextDouble();
+        double distanceInKm = enterValue.nextDouble();
 
-        System.out.printf("Speed value is: %s m/sec %n", df2.format(kmToM(s) / minToSec(t)));
-
+        System.out.printf("Speed value is: %s m/sec %n", df2.format(kmToM(distanceInKm) / minToSec(timeInMin)));
     }
 
-    private static double minToSec(double t) {
-        return t * 60;
+    private static double minToSec(double timeInMin) {
+        return timeInMin * 60;
     }
 
-    private static double kmToM(double s) {
-        return s * 1000;
+    private static double kmToM(double distanceInKm) {
+        return distanceInKm * 1000;
     }
 
 }
+
