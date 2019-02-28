@@ -18,16 +18,14 @@ public class Task2 {
         System.out.println("Enter the distance value in km:");
         double distanceInKm = enterValue.nextDouble();
 
-        System.out.printf("Speed value is: %s m/sec %n", df2.format(kmToM(distanceInKm) / minToSec(timeInMin)));
+        System.out.printf("Speed value is: %s m/sec %n", df2.format(convertKmToM(distanceInKm) / convertMinToSec(timeInMin)));
     }
 
-    private static double minToSec(double timeInMin) {
+    private static double convertMinToSec(double timeInMin) {
         return timeInMin * 60;
     }
 
-    private static double kmToM(double distanceInKm) {
+    private static double convertKmToM(double distanceInKm) {
         return distanceInKm * 1000;
     }
-
 }
-

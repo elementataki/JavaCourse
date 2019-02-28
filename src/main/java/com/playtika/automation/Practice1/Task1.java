@@ -32,7 +32,7 @@ public class Task1 {
         System.out.println("Enter weight of cookies in kg: ");
         double cookieWeight = enterValue.nextDouble();
 
-        double purchasePrice = itemPrice(candyPrice, candyWeight) + itemPrice(cookiePrice, cookieWeight);
+        double purchasePrice = calculateItemCost(candyPrice, candyWeight) + calculateItemCost(cookiePrice, cookieWeight);
 
         if (purchaseQuantity == 1) {
             System.out.printf("Purchase price of %s kg of candies and %s kg of cookies is %s uah.%n%n",
@@ -45,8 +45,7 @@ public class Task1 {
         }
     }
 
-    private static double itemPrice(double price, double weight) {
-        return price * weight;
+    private static double calculateItemCost(double itemPrice, double itemWeight) {
+        return itemPrice * itemWeight;
     }
-
 }
