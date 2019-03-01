@@ -22,7 +22,7 @@ public class Task1 {
 
     public static void main(String[] args) {
 
-        System.out.println("Enter the cell width which is a multiple of three");
+        System.out.println("Enter the cell width: 3, 6 or 9");
         Scanner enterValue = new Scanner(System.in);
         int cellWidth = enterValue.nextInt();
 
@@ -32,20 +32,25 @@ public class Task1 {
 
         int solidLineSize = CELLS_QUANTITY * cellWidth + QUANTITY_OF_SEPARATORS_BETWEEN_CELLS;
 
-        if (cellWidth % 3 == 0) {
+        while (true) {
+            if (cellWidth == 3 || cellWidth == 6 || cellWidth == 9) {
 
-            printSolidLine(solidLineSize);
-
-            for (int j = 1; j <= CELLS_QUANTITY; j++) {
-
-                for (int k = 1; k <= (cellWidth / MULTIPLIER_OF_ROWS_QUANTITY); k++) {
-
-                    printCellString(cellWidth, CELLS_QUANTITY);
-                }
                 printSolidLine(solidLineSize);
+
+                for (int j = 1; j <= CELLS_QUANTITY; j++) {
+
+                    for (int k = 1; k <= (cellWidth / MULTIPLIER_OF_ROWS_QUANTITY); k++) {
+
+                        printCellString(cellWidth, CELLS_QUANTITY);
+                    }
+                    printSolidLine(solidLineSize);
+                }
+                break;
+            } else {
+                System.out.println("You have entered an invalid data. Please enter the cell width: 3, 6 or 9");
+                cellWidth = enterValue.nextInt();
+                solidLineSize = CELLS_QUANTITY * cellWidth + QUANTITY_OF_SEPARATORS_BETWEEN_CELLS;
             }
-        } else {
-            System.out.println("Invalid data. Please re-run the program and try again");
         }
     }
 
