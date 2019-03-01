@@ -1,4 +1,4 @@
-package com.playtika.automation.Practice1;
+package com.playtika.automation.practice1;
 
 /*
 Пользователь вводит цены 1 кг конфет и 1 кг печенья. Найдите стоимость:

@@ -1,4 +1,4 @@
-package com.playtika.automation.HomeWork2;
+package com.playtika.automation.homework2;
 
 /*
 Напишите программу, которая строит “сетку” 4 х 4:

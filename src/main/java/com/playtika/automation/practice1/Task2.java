@@ -1,10 +1,10 @@
-package com.playtika.automation.Practice1;
+package com.playtika.automation.practice1;
 
 // Пользователь вводит время в минутах и расстояние в километрах. Найдите скорость в м/c.
 
 import java.util.Scanner;
 
-import static com.playtika.automation.Practice1.Task1.df2;
+import static com.playtika.automation.practice1.Task1.df2;
 
 public class Task2 {
 

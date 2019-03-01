@@ -1,4 +1,4 @@
-package com.playtika.automation.HomeWork1;
+package com.playtika.automation.homework1;
 
 /*
 Задание 3.

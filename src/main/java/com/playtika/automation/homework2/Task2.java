@@ -1,4 +1,4 @@
-package com.playtika.automation.HomeWork2;
+package com.playtika.automation.homework2;
 
 /*
 Есть целое положительное число (long). Программа должна определить сумму цифр из которых состоит число.
