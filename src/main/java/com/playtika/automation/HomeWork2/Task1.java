@@ -42,7 +42,6 @@ public class Task1 {
 
                     printCellString(cellWidth, CELLS_QUANTITY);
                 }
-
                 printSolidLine(solidLineSize);
             }
         } else {
