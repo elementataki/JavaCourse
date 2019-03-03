@@ -12,18 +12,16 @@ public class Task2 {
 
     public static void main(String[] args) {
 
-        System.out.println("Enter a positive number: ");
+        System.out.print("Enter a positive number: ");
         Scanner enterValue = new Scanner(System.in);
         long numberToDecompose = enterValue.nextLong();
 
-        while (true) {
-            if (numberToDecompose >= 0) {
-                determineSumOfDigits(numberToDecompose);
-                break;
-            } else {
-                System.out.println("You have entered an invalid data. Please enter a positive number: ");
-                numberToDecompose = enterValue.nextLong();
-            }
+        if (numberToDecompose >= 0) {
+            determineSumOfDigits(numberToDecompose);
+        } else {
+            System.out.print("You have entered an invalid data. Please enter a positive number: ");
+            numberToDecompose = enterValue.nextLong();
+            determineSumOfDigits(numberToDecompose);
         }
     }
 

@@ -22,34 +22,43 @@ public class Task1 {
 
     public static void main(String[] args) {
 
-        System.out.println("Enter the cell width: 3, 6 or 9");
+        System.out.print("Enter the cell width: 3, 6 or 9: ");
         Scanner enterValue = new Scanner(System.in);
         int cellWidth = enterValue.nextInt();
 
         final int CELLS_QUANTITY = 4;
         final int QUANTITY_OF_SEPARATORS_BETWEEN_CELLS = 5;
-        final int MULTIPLIER_OF_ROWS_QUANTITY = 3;
 
         int solidLineSize = CELLS_QUANTITY * cellWidth + QUANTITY_OF_SEPARATORS_BETWEEN_CELLS;
 
-        while (true) {
-            if (cellWidth == 3 || cellWidth == 6 || cellWidth == 9) {
+        if (cellWidth == 3 || cellWidth == 6 || cellWidth == 9) {
 
-                printSolidLine(solidLineSize);
+            printGrid(cellWidth, solidLineSize);
 
-                for (int j = 1; j <= CELLS_QUANTITY; j++) {
+        } else {
+            System.out.print("You have entered an invalid data. Please enter the cell width: 3, 6 or 9: ");
+            cellWidth = enterValue.nextInt();
+            solidLineSize = CELLS_QUANTITY * cellWidth + QUANTITY_OF_SEPARATORS_BETWEEN_CELLS;
+            printGrid(cellWidth, solidLineSize);
+        }
+    }
 
-                    for (int k = 1; k <= (cellWidth / MULTIPLIER_OF_ROWS_QUANTITY); k++) {
+    private static void printGrid(int cellWidth, int solidLineSize) {
 
-                        printCellString(cellWidth, CELLS_QUANTITY);
-                    }
-                    printSolidLine(solidLineSize);
+        final int CELLS_QUANTITY = 4;
+        final int MULTIPLIER_OF_ROWS_QUANTITY = 3;
+
+        if (cellWidth == 3 || cellWidth == 6 || cellWidth == 9) {
+
+            printSolidLine(solidLineSize);
+
+            for (int j = 1; j <= CELLS_QUANTITY; j++) {
+
+                for (int k = 1; k <= (cellWidth / MULTIPLIER_OF_ROWS_QUANTITY); k++) {
+
+                    printCellString(cellWidth, CELLS_QUANTITY);
                 }
-                break;
-            } else {
-                System.out.println("You have entered an invalid data. Please enter the cell width: 3, 6 or 9");
-                cellWidth = enterValue.nextInt();
-                solidLineSize = CELLS_QUANTITY * cellWidth + QUANTITY_OF_SEPARATORS_BETWEEN_CELLS;
+                printSolidLine(solidLineSize);
             }
         }
     }
@@ -58,7 +67,6 @@ public class Task1 {
         for (int i = 1; i <= solidLineSize; i++) {
             System.out.print("*");
         }
-
         System.out.println();
     }
 
