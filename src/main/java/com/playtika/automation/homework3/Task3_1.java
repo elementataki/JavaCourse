@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Task3 {
+public class Task3_1 {
 
     public static void main(String[] args) {
 
