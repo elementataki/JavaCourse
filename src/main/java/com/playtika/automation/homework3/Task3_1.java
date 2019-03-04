@@ -35,7 +35,7 @@ public class Task3_1 {
 
             if (array[i] % 3 == 0) {
 
-                System.out.print(array[i] + ", ");
+                System.out.print(array[i] + " ");
             }
         }
         System.out.println();
