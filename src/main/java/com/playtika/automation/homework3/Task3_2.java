@@ -15,12 +15,10 @@ public class Task3_2 {
         final int MAX_VALUE = 999;
 
         Scanner console = new Scanner(System.in);
-        System.out.print("Enter the 1D size: ");
-        int d1 = console.nextInt();
-        System.out.print("Enter the 2D size: ");
-        int d2 = console.nextInt();
+        System.out.print("Enter the Matrix size: ");
+        int matrixSize = console.nextInt();
 
-        int[][] array = new int[d1][d2];
+        int[][] array = new int[matrixSize][matrixSize];
 
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
@@ -40,34 +38,30 @@ public class Task3_2 {
 
         System.out.println("The main diagonal of the matrix consists of the following elements:");
 
-        findMainDiagonal(array);
+        findMainDiagonal(array, matrixSize);
 
         System.out.println();
 
         System.out.println("The antidiagonal of the matrix consists of the following elements:");
 
-        findAntidiagonal(array);
+        findAntidiagonal(array, matrixSize);
     }
 
-    private static void findMainDiagonal(int[][] array) {
+    private static void findMainDiagonal(int[][] array, int matrixSize) {
 
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                if (i == j) {
-                    System.out.println(array[i][j]);
-                }
-            }
+        for (int i = 0; i < matrixSize; i++) {
+
+            System.out.println(array[i][i]);
         }
     }
 
-    private static void findAntidiagonal(int[][] array) {
+    private static void findAntidiagonal(int[][] array, int matrixSize) {
 
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                if ((i + j) == array.length - 1) {
-                    System.out.println(array[i][j]);
-                }
-            }
+        for (int i = 0; i < matrixSize; i++) {
+
+            int j = matrixSize - i - 1;
+
+            System.out.println(array[i][j]);
         }
     }
 }
