@@ -59,7 +59,7 @@ public class Task3_2 {
 
         for (int i = 0; i < matrixSize; i++) {
 
-            int j = matrixSize - i - 1;
+            int j = (matrixSize - 1) - i;
 
             System.out.println(array[i][j]);
         }
