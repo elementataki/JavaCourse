@@ -17,28 +17,30 @@ public class Task4 {
 
         Scanner console = new Scanner(System.in);
 
-//        System.out.print("Enter first name and last name: ");
-//        String nameInput = console.nextLine();
+        System.out.print("Enter first name and last name: ");
+        String nameInput = console.nextLine();
 
-        System.out.print("Enter mobile phone number: +380 ");
+        System.out.print("Enter mobile phone number in format +380 XX XXXXXXX: +380 ");
         String phoneInput = console.nextLine();
-//
-//        System.out.println("Enter email: ");
-//        String emailInput = console.nextLine();
 
-//        Pattern name = Pattern.compile("^\\w[a-zA-Z-']*\\w\\s\\w[a-zA-Z-']*\\w$");
-//        if (name.matcher(nameInput).matches()) {
-//            System.out.println("name is ok");
-//        } else {
-//            System.out.printf("Entered name %s is invalid%n", nameInput);
-//        }
+        System.out.print("Enter email: ");
+        String emailInput = console.nextLine();
 
-        Pattern phone = Pattern.compile("[0-9]{2}\\s[0-9]{7}");
-        if (phone.matcher(phoneInput).matches()) {
-            System.out.println("phone is ok");
-        } else {
-            System.out.printf("Entered phone number +380 %s is invalid%n", phoneInput);
+        System.out.println();
+
+        Pattern name = Pattern.compile("^[a-zA-Z']+(-[a-zA-Z']+)?(\\s[a-zA-Z']+(-[a-zA-Z']+)?)+$");
+        if (!(name.matcher(nameInput).matches())) {
+            System.out.printf("Entered name '%s' is invalid%n", nameInput);
         }
 
+        Pattern phone = Pattern.compile("^[0-9]{2}\\s[0-9]{7}$");
+        if (!(phone.matcher(phoneInput).matches())) {
+            System.out.printf("Entered phone number '+380 %s' is invalid%n", phoneInput);
+        }
+
+        Pattern email = Pattern.compile("^\\w([_a-zA-Z0-9-]+)\\w(\\.\\w[_a-zA-Z0-9-]\\w+)*@[a-zA-Z0-9]+(\\.[a-zA-Z0-9]+)*(\\.[a-zA-Z]{2,})$");
+        if (!(email.matcher(emailInput).matches())) {
+            System.out.printf("Entered email '%s' is invalid%n", emailInput);
+        }
     }
 }
