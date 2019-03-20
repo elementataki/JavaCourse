@@ -1,4 +1,4 @@
-package com.playtika.automation.practice3guessword;
+package com.playtika.automation.practice3_guessWord;
 
 import java.util.concurrent.ThreadLocalRandom;
 
