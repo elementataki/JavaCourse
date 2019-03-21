@@ -64,10 +64,10 @@ public class TriangleFinder {
 
         System.out.println();
 
-        int t1 = 0;
-        int t2 = 0;
-        int t3 = 0;
-        int t4 = 0;
+        int equilateralTrianglesQuantity = 0;
+        int isoscelesTrianglesQuantity = 0;
+        int rightTrianglesQuantity = 0;
+        int arbitraryTrianglesQuantity = 0;
 
         boolean notPrinted = true;
 
@@ -82,57 +82,57 @@ public class TriangleFinder {
             Triangle t = tg.generateTriangle();
 
             if (t.isTriangleEquilateral()) {
-                t1++;
+                equilateralTrianglesQuantity++;
                 if (requiredTriangle == 1 && notPrinted) {
-                    t.triangleInfo(i, t);
+                    t.getTriangleInfo(i, t);
                     notPrinted = false;
                 }
                 continue;
             }
 
             if (t.isTriangleIsosceles()) {
-                t2++;
+                isoscelesTrianglesQuantity++;
                 if (requiredTriangle == 2 && notPrinted) {
-                    t.triangleInfo(i, t);
+                    t.getTriangleInfo(i, t);
                     notPrinted = false;
                 }
                 continue;
             }
 
             if (t.isTriangleRight()) {
-                t3++;
+                rightTrianglesQuantity++;
                 if (requiredTriangle == 3 && notPrinted) {
-                    t.triangleInfo(i, t);
+                    t.getTriangleInfo(i, t);
                     notPrinted = false;
                 }
             }
 
             if (!(t.isTriangleEquilateral()) && !(t.isTriangleIsosceles()) && !(t.isTriangleRight())) {
-                t4++;
+                arbitraryTrianglesQuantity++;
                 if (requiredTriangle == 4 && notPrinted) {
-                    t.triangleInfo(i, t);
+                    t.getTriangleInfo(i, t);
                     notPrinted = false;
                 }
             }
         }
 
-        if (requiredTriangle == 1 && t1 == 0) {
+        if (requiredTriangle == 1 && equilateralTrianglesQuantity == 0) {
             System.out.println("There is no an equilateral triangle");
         }
 
-        if (requiredTriangle == 2 && t2 == 0) {
+        if (requiredTriangle == 2 && isoscelesTrianglesQuantity == 0) {
             System.out.println("There is no an isosceles triangle");
         }
 
-        if (requiredTriangle == 3 && t3 == 0) {
+        if (requiredTriangle == 3 && rightTrianglesQuantity == 0) {
             System.out.println("There is no a right triangle");
         }
 
         System.out.println();
-        System.out.printf("The quantity of equilateral triangles is: %s%n", t1);
-        System.out.printf("The quantity of isosceles triangles is: %s%n", t2);
-        System.out.printf("The quantity of right triangles is: %s%n", t3);
-        System.out.printf("The quantity of arbitrary triangles is: %s%n", t4);
-        System.out.printf("Total quantity of triangles is: %s%n", t1 + t2 + t3 + t4);
+        System.out.printf("The quantity of equilateral triangles is: %s%n", equilateralTrianglesQuantity);
+        System.out.printf("The quantity of isosceles triangles is: %s%n", isoscelesTrianglesQuantity);
+        System.out.printf("The quantity of right triangles is: %s%n", rightTrianglesQuantity);
+        System.out.printf("The quantity of arbitrary triangles is: %s%n", arbitraryTrianglesQuantity);
+        System.out.printf("Total quantity of triangles is: %s%n", equilateralTrianglesQuantity + isoscelesTrianglesQuantity + rightTrianglesQuantity + arbitraryTrianglesQuantity);
     }
 }

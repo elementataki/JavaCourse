@@ -61,32 +61,32 @@ class Triangle {
     }
 
 
-    private int triangleType() {
+    private TriangleType getTriangleType() {
         if (isTriangleEquilateral()) {
-            return 1;
+            return TriangleType.EQUILATERAL;
         }
         if (isTriangleIsosceles()) {
-            return 2;
+            return TriangleType.ISOSCELES;
         }
         if (isTriangleRight()) {
-            return 3;
+            return TriangleType.RIGHT;
         } else {
-            return 4;
+            return TriangleType.ARBITRARY;
         }
     }
 
-    protected void triangleInfo(int i, Triangle t) {
-        switch (triangleType()) {
-            case 1:
+    protected void getTriangleInfo(int i, Triangle t) {
+        switch (getTriangleType()) {
+            case EQUILATERAL:
                 System.out.println("The equilateral triangle has been found!");
                 break;
-            case 2:
+            case ISOSCELES:
                 System.out.println("The isosceles triangle has been found!");
                 break;
-            case 3:
+            case RIGHT:
                 System.out.println("The right triangle has been found!");
                 break;
-            case 4:
+            case ARBITRARY:
                 System.out.println("The arbitrary triangle has been found!");
                 break;
         }
