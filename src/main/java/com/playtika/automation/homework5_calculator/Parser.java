@@ -22,7 +22,7 @@ public class Parser {
 
             return new ParseResult(op1, operator, op2);
         }
-        throw new RuntimeException("Enter 3 ");
+        throw new RuntimeException("Invalid entered data");
     }
 
     private Operator getOperator(String operator) {

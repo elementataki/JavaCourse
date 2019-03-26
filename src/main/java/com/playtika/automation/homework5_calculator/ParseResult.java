@@ -2,13 +2,13 @@ package com.playtika.automation.homework5_calculator;
 
 public class ParseResult {
 
-    double op1;
-    double op2;
+    double operant1;
+    double operant2;
     Operator operator;
 
-    public ParseResult(double op1, Operator operator, double op2) {
-        this.op1 = op1;
-        this.op2 = op2;
+    public ParseResult(double operant1, Operator operator, double operant2) {
+        this.operant1 = operant1;
+        this.operant2 = operant2;
         this.operator = operator;
     }
 
