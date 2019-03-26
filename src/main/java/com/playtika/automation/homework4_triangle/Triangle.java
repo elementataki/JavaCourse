@@ -2,6 +2,11 @@ package com.playtika.automation.homework4_triangle;
 
 import java.text.DecimalFormat;
 
+import static com.playtika.automation.homework4_triangle.TriangleType.ARBITRARY;
+import static com.playtika.automation.homework4_triangle.TriangleType.EQUILATERAL;
+import static com.playtika.automation.homework4_triangle.TriangleType.ISOSCELES;
+import static com.playtika.automation.homework4_triangle.TriangleType.RIGHT;
+
 class Triangle {
 
     private final float EPSILON = 0.001f;
@@ -63,15 +68,15 @@ class Triangle {
 
     private TriangleType getTriangleType() {
         if (isTriangleEquilateral()) {
-            return TriangleType.EQUILATERAL;
+            return EQUILATERAL;
         }
         if (isTriangleIsosceles()) {
-            return TriangleType.ISOSCELES;
+            return ISOSCELES;
         }
         if (isTriangleRight()) {
-            return TriangleType.RIGHT;
+            return RIGHT;
         } else {
-            return TriangleType.ARBITRARY;
+            return ARBITRARY;
         }
     }
 
