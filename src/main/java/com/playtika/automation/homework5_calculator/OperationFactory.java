@@ -8,7 +8,7 @@ import com.playtika.automation.homework5_calculator.operations.Multiplication;
 import com.playtika.automation.homework5_calculator.operations.Radical;
 import com.playtika.automation.homework5_calculator.operations.Subtraction;
 
-public class OperationsFactory {
+public class OperationFactory {
 
     public BinaryOperation getOperationFor(Operator operator) {
         switch (operator) {
