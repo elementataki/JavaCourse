@@ -13,6 +13,7 @@ package com.playtika.automation.homework7_grep;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class grep {
 
@@ -24,15 +25,16 @@ public class grep {
         System.out.print("Enter grep: ");
         String grep = console.nextLine();
 
-        try {
-            File file = new File(path);
-            Scanner reader = new Scanner(file);
+        Pattern pattern = Pattern.compile(grep);
+
+        try (Scanner reader = new Scanner(new File(path))) {
+
             int line = 1;
 
             while (reader.hasNextLine()) {
                 String string = reader.nextLine();
 
-                if (string.contains(grep)) {
+                if (pattern.matcher(string).find()) {
                     System.out.println(line + "  " + string);
                 }
 
