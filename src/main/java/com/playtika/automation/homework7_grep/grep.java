@@ -38,7 +38,6 @@ public class grep {
 
                 line++;
             }
-            reader.close();
 
         } catch (FileNotFoundException e) {
             System.err.print("File not found");
