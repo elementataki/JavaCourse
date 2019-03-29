@@ -29,14 +29,11 @@ public class Collection {
             while (reader.hasNext()) {
                 String string = reader.next();
 
-                Integer i = map.get(string);
-                if (i == null) {
-                    i = 1;
-                } else {
-                    i = i + 1;
-                }
+                Integer i = map.getOrDefault(string, 0);
+                i++;
                 map.put(string, i);
             }
+
             for (Map.Entry m : map.entrySet())
                 System.out.println(m.getKey() + " - " + m.getValue());
 
