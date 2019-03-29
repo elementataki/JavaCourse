@@ -40,7 +40,6 @@ public class Collection {
             for (Map.Entry m : map.entrySet())
                 System.out.println(m.getKey() + " - " + m.getValue());
 
-
         } catch (FileNotFoundException e) {
             System.err.print("File not found");
         }
