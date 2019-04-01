@@ -27,7 +27,7 @@ public class Collection {
             TreeMap<String, Integer> map = new TreeMap<>();
 
             while (reader.hasNext()) {
-                String string = reader.next();
+                String string = reader.next().toLowerCase();
 
                 Integer i = map.getOrDefault(string, 0);
                 i++;
