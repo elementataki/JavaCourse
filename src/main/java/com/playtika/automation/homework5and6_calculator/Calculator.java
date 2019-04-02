@@ -1,4 +1,4 @@
-package com.playtika.automation.homework5_calculator;
+package com.playtika.automation.homework5and6_calculator;
 
 public class Calculator {
 

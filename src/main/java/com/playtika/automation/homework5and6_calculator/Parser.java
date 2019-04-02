@@ -1,12 +1,12 @@
-package com.playtika.automation.homework5_calculator;
+package com.playtika.automation.homework5and6_calculator;
 
-import static com.playtika.automation.homework5_calculator.Operator.ADDITION;
-import static com.playtika.automation.homework5_calculator.Operator.DIVISION;
-import static com.playtika.automation.homework5_calculator.Operator.EXPONENTIATION;
-import static com.playtika.automation.homework5_calculator.Operator.LOGARITHM;
-import static com.playtika.automation.homework5_calculator.Operator.MULTIPLICATION;
-import static com.playtika.automation.homework5_calculator.Operator.RADICAL;
-import static com.playtika.automation.homework5_calculator.Operator.SUBTRACTION;
+import static com.playtika.automation.homework5and6_calculator.Operator.ADDITION;
+import static com.playtika.automation.homework5and6_calculator.Operator.DIVISION;
+import static com.playtika.automation.homework5and6_calculator.Operator.EXPONENTIATION;
+import static com.playtika.automation.homework5and6_calculator.Operator.LOGARITHM;
+import static com.playtika.automation.homework5and6_calculator.Operator.MULTIPLICATION;
+import static com.playtika.automation.homework5and6_calculator.Operator.RADICAL;
+import static com.playtika.automation.homework5and6_calculator.Operator.SUBTRACTION;
 
 public class Parser {
 

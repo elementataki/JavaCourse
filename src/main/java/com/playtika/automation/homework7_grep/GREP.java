@@ -1,7 +1,7 @@
 package com.playtika.automation.homework7_grep;
 
 /*
-Разработать программу, аналог grep :).
+Разработать программу, аналог GREP :).
 Программа ожидает 2 параметра на входе:
 1. имя файла (относительное либо полный путь)
 2. строку/регулярное выражение
@@ -15,14 +15,14 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public class grep {
+public class GREP {
 
     public static void main(String[] args) {
 
         Scanner console = new Scanner(System.in);
         System.out.print("Enter path to the file: ");
         String path = console.nextLine();
-        System.out.print("Enter grep: ");
+        System.out.print("Enter GREP: ");
         String grep = console.nextLine();
 
         Pattern pattern = Pattern.compile(grep);

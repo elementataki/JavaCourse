@@ -1,6 +1,6 @@
-package com.playtika.automation.homework5_calculator.operations;
+package com.playtika.automation.homework5and6_calculator.operations;
 
-import com.playtika.automation.homework5_calculator.BinaryOperation;
+import com.playtika.automation.homework5and6_calculator.BinaryOperation;
 
 public class Multiplication implements BinaryOperation {
 

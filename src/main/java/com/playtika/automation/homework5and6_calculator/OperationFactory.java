@@ -1,12 +1,12 @@
-package com.playtika.automation.homework5_calculator;
+package com.playtika.automation.homework5and6_calculator;
 
-import com.playtika.automation.homework5_calculator.operations.Addition;
-import com.playtika.automation.homework5_calculator.operations.Division;
-import com.playtika.automation.homework5_calculator.operations.Exponentiation;
-import com.playtika.automation.homework5_calculator.operations.Logarithm;
-import com.playtika.automation.homework5_calculator.operations.Multiplication;
-import com.playtika.automation.homework5_calculator.operations.Radical;
-import com.playtika.automation.homework5_calculator.operations.Subtraction;
+import com.playtika.automation.homework5and6_calculator.operations.Addition;
+import com.playtika.automation.homework5and6_calculator.operations.Division;
+import com.playtika.automation.homework5and6_calculator.operations.Exponentiation;
+import com.playtika.automation.homework5and6_calculator.operations.Logarithm;
+import com.playtika.automation.homework5and6_calculator.operations.Multiplication;
+import com.playtika.automation.homework5and6_calculator.operations.Radical;
+import com.playtika.automation.homework5and6_calculator.operations.Subtraction;
 
 public class OperationFactory {
 
